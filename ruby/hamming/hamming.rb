@@ -4,17 +4,11 @@ class Hamming
             raise ArgumentError
         end
 
-        if seq1 == seq2
-            0
-        else
-            diff = 0
-            for pos in 0..seq1.length - 1
-                if seq1[pos] != seq2[pos]
-                    diff = diff + 1
-                end            
-            end
-            diff
-        end
-        
+        diff = 0
+        seq1.each_char.with_index do |c, i|
+            diff += c != seq2[i]            
+        end 
+               
+        diff
     end
 end
