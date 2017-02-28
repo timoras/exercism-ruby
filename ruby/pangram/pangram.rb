@@ -1,8 +1,7 @@
 class Pangram
     def self.pangram? (phrase)
-        p = phrase.dup.downcase
-        [*?a..?z].each { |x| return false unless p.include?(x) }
-        true
+        p = phrase.dup.downcase    
+        [*?a..?z].all? { |x| p.include?(x) }
     end
 end
 
