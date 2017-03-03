@@ -9,17 +9,17 @@ require_relative 'nth_prime'
 class NthPrimeTest < Minitest::Test
 
   def test_is_prime    
-    assert_equal TRUE, PrimeCheker.new.is_prime?(2), 2.to_s
-    assert_equal TRUE, PrimeCheker.new.is_prime?(3), 3.to_s
-    assert_equal TRUE, PrimeCheker.new.is_prime?(5), 5.to_s
-    assert_equal TRUE, PrimeCheker.new.is_prime?(7), 7.to_s
-    assert_equal TRUE, PrimeCheker.new.is_prime?(11), 11.to_s
+    assert_equal TRUE, PrimeCheker.new.prime?(2), 2.to_s
+    assert_equal TRUE, PrimeCheker.new.prime?(3), 3.to_s
+    assert_equal TRUE, PrimeCheker.new.prime?(5), 5.to_s
+    assert_equal TRUE, PrimeCheker.new.prime?(7), 7.to_s
+    assert_equal TRUE, PrimeCheker.new.prime?(11), 11.to_s
 
-    assert_equal FALSE, PrimeCheker.new.is_prime?(4)
-    assert_equal FALSE, PrimeCheker.new.is_prime?(6)
-    assert_equal FALSE, PrimeCheker.new.is_prime?(8)
-    assert_equal FALSE, PrimeCheker.new.is_prime?(9)
-    assert_equal FALSE, PrimeCheker.new.is_prime?(10)
+    assert_equal FALSE, PrimeCheker.new.prime?(4)
+    assert_equal FALSE, PrimeCheker.new.prime?(6)
+    assert_equal FALSE, PrimeCheker.new.prime?(8)
+    assert_equal FALSE, PrimeCheker.new.prime?(9)
+    assert_equal FALSE, PrimeCheker.new.prime?(10)
   end
 
   def test_first_prime    
